@@ -1,0 +1,14 @@
+[build]
+  # No build command needed - this is a serverless functions project
+  publish = "public"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# Redirect root to GitHub repo (matching Vercel behavior)
+[[redirects]]
+  from = "/"
+  to = "https://github.com/anuraghazra/github-readme-stats"
+  status = 301
+  force = true
